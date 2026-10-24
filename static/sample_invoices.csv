@@ -1,0 +1,4 @@
+invoice_id,date,amount,gstin,claimed_utr,buyer_name,description
+INV-2026-0101,2026-09-01,25000.00,27AABCS1429B1Z8,UTR-MED-001,Sharma Clinic Delhi,Supply of 5x Digital Vital Monitors
+INV-2026-0102,2026-09-01,45000.00,24AABCS1429B1Z1,UTR-MED-002,Patel Healthcare Ahmedabad,Bulk batch Surgical Gloves and PPE
+INV-2026-0103,2026-09-01,30000.00,27AABCS1429B1Z8,UTR-MED-003,Kumar Diagnostics Pune,Diagnostic Blood Chemistry Reagents

@@ -1,0 +1,52 @@
+[
+ {
+  "days_left": null,
+  "deadline": "2026-01-10",
+  "key": "BANK_GRIEVANCE_7D",
+  "label": "Bank submits grievance (7 days)",
+  "note": null,
+  "sop_reference": "SOP Para 10.1(a) / 10.2(b)",
+  "starts_on": "2026-01-03",
+  "status": "COMPLETED"
+ },
+ {
+  "days_left": 9,
+  "deadline": "2026-01-19",
+  "key": "IO_DECISION_15D",
+  "label": "IO decides on grievance (15 days)",
+  "note": null,
+  "sop_reference": "SOP Para 10.1(d)(e) / 10.2(d)(e)",
+  "starts_on": "2026-01-04",
+  "status": "ON_TRACK"
+ },
+ {
+  "days_left": 11,
+  "deadline": "2026-01-21",
+  "key": "INTERIM_CUSTODY_15D",
+  "label": "Bank completes interim custody (15 days from IO direction)",
+  "note": "The applicable process depends on whether there is one victim or multiple competing victims.",
+  "sop_reference": "SOP Para 11, Process 1(v) (single victim) / Process 2(h) (multiple victims)",
+  "starts_on": "2026-01-06",
+  "status": "ON_TRACK"
+ },
+ {
+  "days_left": 84,
+  "deadline": "2026-04-04",
+  "key": "HOLD_REVIEW_90D",
+  "label": "Conditional hold-review/removal milestone (90 days from bank grievance submission)",
+  "note": "Not a universal automatic expiry. Check whether another case or court proceeding requires retention, whether lawful directions are pending, and whether an extension applies. Bank intimation is required at least 15 calendar days before the relevant 90-day point; an LEA may request up to 90 additional days.",
+  "sop_reference": "SOP Para 10.1, conditional 90-day grievance/hold paragraph",
+  "starts_on": "2026-01-04",
+  "status": "ON_TRACK"
+ },
+ {
+  "days_left": null,
+  "deadline": null,
+  "key": "SUSPENSION_REVIEW_45D",
+  "label": "Digital-suspension review checkpoint (45 days; proposed policy)",
+  "note": "Project-defined review checkpoint only. The supplied SOP does not establish a general 45-day suspension cap.",
+  "sop_reference": "PROPOSED POLICY - NOT an SOP clause",
+  "starts_on": null,
+  "status": "NOT_STARTED"
+ }
+]

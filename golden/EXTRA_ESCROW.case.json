@@ -1,0 +1,91 @@
+{
+ "account": {
+  "account_id": "ACC-X",
+  "account_type": "ESCROW",
+  "holder_name": "Extra Co",
+  "layer": 2
+ },
+ "case_id": "EXTRA_ESCROW",
+ "complaints": [
+  {
+   "complaint_id": "M2",
+   "complaint_timestamp": "2026-01-02T10:00:00",
+   "disputed_amount": "20000.00",
+   "disputed_utr": "UTR-X-2",
+   "state": "X",
+   "victim_label": "Victim M2"
+  },
+  {
+   "complaint_id": "M1",
+   "complaint_timestamp": "2026-01-02T11:00:00",
+   "disputed_amount": "10000.00",
+   "disputed_utr": "UTR-X-1",
+   "state": "X",
+   "victim_label": "Victim M1"
+  }
+ ],
+ "demo_today": "2026-01-10",
+ "description": "Checker-only case.",
+ "invoices": [],
+ "opening_balance": "10000.00",
+ "seizure_timestamp": "2026-01-01T14:00:00",
+ "sla_context": {
+  "account_holder_complaint_on": "2026-01-03",
+  "grievance_filed_on": "2026-01-04",
+  "io_decision_on": null,
+  "io_direction_on": "2026-01-06",
+  "suspension_started_on": null
+ },
+ "tier": 3,
+ "title": "Extra test: mixed clean + tainted",
+ "transactions": [
+  {
+   "amount": "5000.00",
+   "narration": "",
+   "timestamp": "2026-01-01T09:00:00",
+   "txn_id": "T1",
+   "type": "CREDIT",
+   "utr": "UTR-X-CLEAN"
+  },
+  {
+   "amount": "12000.00",
+   "narration": "",
+   "timestamp": "2026-01-01T10:00:00",
+   "txn_id": "T2",
+   "type": "CREDIT",
+   "utr": "UTR-X-1"
+  },
+  {
+   "amount": "20000.00",
+   "narration": "",
+   "timestamp": "2026-01-01T10:30:00",
+   "txn_id": "T3",
+   "type": "CREDIT",
+   "utr": "UTR-X-2"
+  },
+  {
+   "amount": "6000.00",
+   "narration": "",
+   "timestamp": "2026-01-01T11:00:00",
+   "txn_id": "T4",
+   "type": "DEBIT",
+   "utr": "OUT-X-1"
+  },
+  {
+   "amount": "30000.00",
+   "narration": "",
+   "timestamp": "2026-01-01T12:00:00",
+   "txn_id": "T5",
+   "type": "DEBIT",
+   "utr": "OUT-X-2"
+  },
+  {
+   "amount": "700.00",
+   "narration": "",
+   "timestamp": "2026-01-01T13:00:00",
+   "txn_id": "T6",
+   "type": "CREDIT",
+   "utr": "UTR-X-CLEAN2"
+  }
+ ]
+}

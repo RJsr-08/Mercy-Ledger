@@ -1,0 +1,11 @@
+{
+ "blanket_innocent_locked": "11000.00",
+ "blanket_total_locked": "11000.00",
+ "case_id": "EXTRA_MIXED",
+ "innocent_capital_freed": "11000.00",
+ "mercy_innocent_locked": "0.00",
+ "recommendation": "DIGITAL_SUSPENSION_PENDING_EDD",
+ "title": "Extra test: mixed clean + tainted",
+ "victim_recoverable_in_blanket": "0.00",
+ "victim_recoverable_preserved": "0.00"
+}

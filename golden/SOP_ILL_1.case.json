@@ -1,0 +1,91 @@
+{
+ "account": {
+  "account_id": "ACC-ILL1",
+  "account_type": "SAVINGS",
+  "holder_name": "Illustration-1 Account Holder",
+  "layer": 1
+ },
+ "case_id": "SOP_ILL_1",
+ "complaints": [
+  {
+   "complaint_id": "B",
+   "complaint_timestamp": "2024-12-16T14:30:00",
+   "disputed_amount": "58000.00",
+   "disputed_utr": "UTR-ILL1-B",
+   "state": "Not specified in SOP",
+   "victim_label": "Victim B"
+  },
+  {
+   "complaint_id": "A",
+   "complaint_timestamp": "2024-12-16T16:15:00",
+   "disputed_amount": "97000.00",
+   "disputed_utr": "UTR-ILL1-A",
+   "state": "Not specified in SOP",
+   "victim_label": "Victim A"
+  },
+  {
+   "complaint_id": "C",
+   "complaint_timestamp": "2024-12-16T19:45:00",
+   "disputed_amount": "150000.00",
+   "disputed_utr": "UTR-ILL1-C",
+   "state": "Not specified in SOP",
+   "victim_label": "Victim C"
+  }
+ ],
+ "demo_today": "2025-01-02",
+ "description": "SOP-derived ledger from MHA/I4C SOP (2 Jan 2026), Annexure-V, Illustration 1, with the Victim C complaint year normalized for internal chronology. A and B funds are no longer fully available; C funds remain in the account.",
+ "invoices": [],
+ "opening_balance": "873.00",
+ "seizure_timestamp": "2024-12-15T16:00:00",
+ "sla_context": {
+  "account_holder_complaint_on": "2024-12-17",
+  "grievance_filed_on": "2024-12-20",
+  "io_decision_on": null,
+  "io_direction_on": null,
+  "suspension_started_on": "2024-12-15"
+ },
+ "tier": 1,
+ "title": "SOP Annexure-V, Illustration 1 (Attribution possible)",
+ "transactions": [
+  {
+   "amount": "97000.00",
+   "narration": "Credit from Victim A",
+   "timestamp": "2024-12-15T13:02:00",
+   "txn_id": "T1",
+   "type": "CREDIT",
+   "utr": "UTR-ILL1-A"
+  },
+  {
+   "amount": "97000.00",
+   "narration": "Outgoing transfer",
+   "timestamp": "2024-12-15T13:09:00",
+   "txn_id": "T2",
+   "type": "DEBIT",
+   "utr": "OUT-ILL1-001"
+  },
+  {
+   "amount": "58000.00",
+   "narration": "Credit from Victim B",
+   "timestamp": "2024-12-15T14:17:00",
+   "txn_id": "T3",
+   "type": "CREDIT",
+   "utr": "UTR-ILL1-B"
+  },
+  {
+   "amount": "50000.00",
+   "narration": "Outgoing transfer",
+   "timestamp": "2024-12-15T14:22:00",
+   "txn_id": "T4",
+   "type": "DEBIT",
+   "utr": "OUT-ILL1-002"
+  },
+  {
+   "amount": "150000.00",
+   "narration": "Credit from Victim C",
+   "timestamp": "2024-12-15T15:11:00",
+   "txn_id": "T5",
+   "type": "CREDIT",
+   "utr": "UTR-ILL1-C"
+  }
+ ]
+}

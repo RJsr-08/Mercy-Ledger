@@ -1,0 +1,11 @@
+{
+ "blanket_innocent_locked": "485000.00",
+ "blanket_total_locked": "485200.00",
+ "case_id": "EXTRA_INVOICE_BAD",
+ "innocent_capital_freed": "485000.00",
+ "mercy_innocent_locked": "0.00",
+ "recommendation": "TARGETED_LIEN_ONLY",
+ "title": "Merchant Rs 200 case (illustrative reconstruction)",
+ "victim_recoverable_in_blanket": "200.00",
+ "victim_recoverable_preserved": "200.00"
+}

@@ -1,0 +1,115 @@
+{
+ "account": {
+  "account_id": "ACC-ILL2",
+  "account_type": "SAVINGS",
+  "holder_name": "Illustration-2 Account Holder",
+  "layer": 1
+ },
+ "case_id": "SOP_ILL_2",
+ "complaints": [
+  {
+   "complaint_id": "X",
+   "complaint_timestamp": "2024-12-16T10:00:00",
+   "disputed_amount": "50000.00",
+   "disputed_utr": "UTR-ILL2-X",
+   "state": "Not specified in SOP",
+   "victim_label": "Victim X"
+  },
+  {
+   "complaint_id": "V",
+   "complaint_timestamp": "2024-12-16T11:00:00",
+   "disputed_amount": "85326.00",
+   "disputed_utr": "UTR-ILL2-V",
+   "state": "Not specified in SOP",
+   "victim_label": "Victim V"
+  },
+  {
+   "complaint_id": "Y",
+   "complaint_timestamp": "2024-12-17T09:00:00",
+   "disputed_amount": "50000.00",
+   "disputed_utr": "UTR-ILL2-Y",
+   "state": "Not specified in SOP",
+   "victim_label": "Victim Y"
+  },
+  {
+   "complaint_id": "Z",
+   "complaint_timestamp": "2024-12-17T10:00:00",
+   "disputed_amount": "30000.00",
+   "disputed_utr": "UTR-ILL2-Z",
+   "state": "Not specified in SOP",
+   "victim_label": "Victim Z"
+  },
+  {
+   "complaint_id": "W",
+   "complaint_timestamp": "2024-12-17T11:00:00",
+   "disputed_amount": "38443.00",
+   "disputed_utr": "UTR-ILL2-W",
+   "state": "Not specified in SOP",
+   "victim_label": "Victim W"
+  }
+ ],
+ "demo_today": "2025-01-25",
+ "description": "SOP-derived ledger from MHA/I4C SOP, Annexure-V, Illustration 2. The printed credits, partial debit and available balance are reproduced; added clock times preserve the stated complaint order and are demo assumptions.",
+ "invoices": [],
+ "opening_balance": "0.00",
+ "seizure_timestamp": "2024-12-15T15:30:00",
+ "sla_context": {
+  "account_holder_complaint_on": null,
+  "grievance_filed_on": null,
+  "io_decision_on": null,
+  "io_direction_on": null,
+  "suspension_started_on": "2024-12-15"
+ },
+ "tier": 1,
+ "title": "SOP Annexure-V, Illustration 2 (Commingled - pro-rata)",
+ "transactions": [
+  {
+   "amount": "85326.00",
+   "narration": "Credit from V",
+   "timestamp": "2024-12-15T12:20:00",
+   "txn_id": "T1",
+   "type": "CREDIT",
+   "utr": "UTR-ILL2-V"
+  },
+  {
+   "amount": "38443.00",
+   "narration": "Credit from W",
+   "timestamp": "2024-12-15T12:51:00",
+   "txn_id": "T2",
+   "type": "CREDIT",
+   "utr": "UTR-ILL2-W"
+  },
+  {
+   "amount": "50000.00",
+   "narration": "Credit from X",
+   "timestamp": "2024-12-15T13:23:00",
+   "txn_id": "T3",
+   "type": "CREDIT",
+   "utr": "UTR-ILL2-X"
+  },
+  {
+   "amount": "50000.00",
+   "narration": "Credit from Y",
+   "timestamp": "2024-12-15T13:55:00",
+   "txn_id": "T4",
+   "type": "CREDIT",
+   "utr": "UTR-ILL2-Y"
+  },
+  {
+   "amount": "30000.00",
+   "narration": "Credit from Z",
+   "timestamp": "2024-12-15T14:30:00",
+   "txn_id": "T5",
+   "type": "CREDIT",
+   "utr": "UTR-ILL2-Z"
+  },
+  {
+   "amount": "47226.00",
+   "narration": "Partial withdrawal",
+   "timestamp": "2024-12-15T15:06:00",
+   "txn_id": "T6",
+   "type": "DEBIT",
+   "utr": "OUT-ILL2-001"
+  }
+ ]
+}

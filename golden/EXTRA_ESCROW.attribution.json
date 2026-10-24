@@ -1,0 +1,177 @@
+{
+ "assumptions": [
+  "Debits consume tainted (disputed) money first, then clean money (taint-first). The SOP does not state a rule; both Annexure-V illustrations are consistent with it.",
+  "If a debit hits one victim's money only, attribution is DIRECT. If it hits two or more victims' money together, it is split PRO-RATA to what each still has in the account (SOP Para 5(xiii)(b)).",
+  "Provisional holds follow complaint order and the available balance (as printed in the Annexure-V Action Summary); restoration follows attribution. They can differ."
+ ],
+ "balance_at_seizure": "11700.00",
+ "case_id": "EXTRA_ESCROW",
+ "clean_ring_fenced": "11700.00",
+ "closing_balance": "11700.00",
+ "epochs": [
+  {
+   "clean_balance": "15000.00",
+   "epoch_no": 1,
+   "event_amount": "5000.00",
+   "event_type": "CREDIT",
+   "event_utr": "UTR-X-CLEAN",
+   "ledger_balance": "15000.00",
+   "note": "Clean credit",
+   "tainted_pool": {},
+   "timestamp": "2026-01-01T09:00:00",
+   "txn_id": "T1"
+  },
+  {
+   "clean_balance": "17000.00",
+   "epoch_no": 2,
+   "event_amount": "12000.00",
+   "event_type": "CREDIT",
+   "event_utr": "UTR-X-1",
+   "ledger_balance": "27000.00",
+   "note": "Tainted credit of 10000.00 from Victim M1",
+   "tainted_pool": {
+    "M1": "10000.00"
+   },
+   "timestamp": "2026-01-01T10:00:00",
+   "txn_id": "T2"
+  },
+  {
+   "clean_balance": "17000.00",
+   "epoch_no": 3,
+   "event_amount": "20000.00",
+   "event_type": "CREDIT",
+   "event_utr": "UTR-X-2",
+   "ledger_balance": "47000.00",
+   "note": "Tainted credit of 20000.00 from Victim M2",
+   "tainted_pool": {
+    "M1": "10000.00",
+    "M2": "20000.00"
+   },
+   "timestamp": "2026-01-01T10:30:00",
+   "txn_id": "T3"
+  },
+  {
+   "clean_balance": "17000.00",
+   "epoch_no": 4,
+   "event_amount": "6000.00",
+   "event_type": "DEBIT",
+   "event_utr": "OUT-X-1",
+   "ledger_balance": "41000.00",
+   "note": "Debit consumed 6000.00 of tainted money (pro-rata across 2 victims)",
+   "tainted_pool": {
+    "M1": "8000.00",
+    "M2": "16000.00"
+   },
+   "timestamp": "2026-01-01T11:00:00",
+   "txn_id": "T4"
+  },
+  {
+   "clean_balance": "11000.00",
+   "epoch_no": 5,
+   "event_amount": "30000.00",
+   "event_type": "DEBIT",
+   "event_utr": "OUT-X-2",
+   "ledger_balance": "11000.00",
+   "note": "Debit consumed 24000.00 of tainted money (pro-rata across 2 victims); debit of 6000.00 came from clean money",
+   "tainted_pool": {},
+   "timestamp": "2026-01-01T12:00:00",
+   "txn_id": "T5"
+  },
+  {
+   "clean_balance": "11700.00",
+   "epoch_no": 6,
+   "event_amount": "700.00",
+   "event_type": "CREDIT",
+   "event_utr": "UTR-X-CLEAN2",
+   "ledger_balance": "11700.00",
+   "note": "Clean credit",
+   "tainted_pool": {},
+   "timestamp": "2026-01-01T13:00:00",
+   "txn_id": "T6"
+  }
+ ],
+ "holds_sequence": [
+  {
+   "balance_available": "11700.00",
+   "complaint_id": "M2",
+   "complaint_timestamp": "2026-01-02T10:00:00",
+   "disputed_amount": "20000.00",
+   "hold_placed": "11700.00",
+   "order": 1
+  },
+  {
+   "balance_available": "0.00",
+   "complaint_id": "M1",
+   "complaint_timestamp": "2026-01-02T11:00:00",
+   "disputed_amount": "10000.00",
+   "hold_placed": "0.00",
+   "order": 2
+  }
+ ],
+ "metrics": {
+  "min_pass_through_minutes": 30
+ },
+ "opening_balance": "10000.00",
+ "totals": {
+  "forwarded_downstream_total": "30000.00",
+  "mercy_right_sized_hold_total": "0.00",
+  "restorable_total": "0.00",
+  "rounding_residual": "0.00",
+  "sop_complaint_order_hold_total": "11700.00"
+ },
+ "victims": [
+  {
+   "attribution_method": "PRO_RATA",
+   "complaint_id": "M2",
+   "disputed_amount": "20000.00",
+   "disputed_utr": "UTR-X-2",
+   "forwarded_downstream": "20000.00",
+   "forwarded_trace": [
+    {
+     "amount": "4000.00",
+     "debit_txn_id": "T4",
+     "debit_utr": "OUT-X-1",
+     "timestamp": "2026-01-01T11:00:00"
+    },
+    {
+     "amount": "16000.00",
+     "debit_txn_id": "T5",
+     "debit_utr": "OUT-X-2",
+     "timestamp": "2026-01-01T12:00:00"
+    }
+   ],
+   "hold_in_current_account": "0.00",
+   "restorable_amount": "0.00",
+   "retention_ratio": "0.000000",
+   "sop_hold_amount": "11700.00",
+   "victim_label": "Victim M2"
+  },
+  {
+   "attribution_method": "PRO_RATA",
+   "complaint_id": "M1",
+   "disputed_amount": "10000.00",
+   "disputed_utr": "UTR-X-1",
+   "forwarded_downstream": "10000.00",
+   "forwarded_trace": [
+    {
+     "amount": "2000.00",
+     "debit_txn_id": "T4",
+     "debit_utr": "OUT-X-1",
+     "timestamp": "2026-01-01T11:00:00"
+    },
+    {
+     "amount": "8000.00",
+     "debit_txn_id": "T5",
+     "debit_utr": "OUT-X-2",
+     "timestamp": "2026-01-01T12:00:00"
+    }
+   ],
+   "hold_in_current_account": "0.00",
+   "restorable_amount": "0.00",
+   "retention_ratio": "0.000000",
+   "sop_hold_amount": "0.00",
+   "victim_label": "Victim M1"
+  }
+ ],
+ "warnings": []
+}

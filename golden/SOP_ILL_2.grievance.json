@@ -1,0 +1,89 @@
+{
+ "all_disputed_matched": false,
+ "case_id": "SOP_ILL_2",
+ "disclaimer": "Consistency check of merchant documents against ledger rows. It does not prove the sale is genuine; the IO verifies under SOP Para 10.",
+ "disputed_matched": 0,
+ "disputed_total": 5,
+ "results": [
+  {
+   "checks": {
+    "amount_match": false,
+    "date_within_1_day": false,
+    "gstin_format_valid": false,
+    "utr_match": false
+   },
+   "complaint_id": "X",
+   "disputed_amount": "50000.00",
+   "disputed_utr": "UTR-ILL2-X",
+   "invoice_id": null,
+   "reasons": [
+    "No invoice submitted for this disputed UTR."
+   ],
+   "verdict": "NO_INVOICE"
+  },
+  {
+   "checks": {
+    "amount_match": false,
+    "date_within_1_day": false,
+    "gstin_format_valid": false,
+    "utr_match": false
+   },
+   "complaint_id": "V",
+   "disputed_amount": "85326.00",
+   "disputed_utr": "UTR-ILL2-V",
+   "invoice_id": null,
+   "reasons": [
+    "No invoice submitted for this disputed UTR."
+   ],
+   "verdict": "NO_INVOICE"
+  },
+  {
+   "checks": {
+    "amount_match": false,
+    "date_within_1_day": false,
+    "gstin_format_valid": false,
+    "utr_match": false
+   },
+   "complaint_id": "Y",
+   "disputed_amount": "50000.00",
+   "disputed_utr": "UTR-ILL2-Y",
+   "invoice_id": null,
+   "reasons": [
+    "No invoice submitted for this disputed UTR."
+   ],
+   "verdict": "NO_INVOICE"
+  },
+  {
+   "checks": {
+    "amount_match": false,
+    "date_within_1_day": false,
+    "gstin_format_valid": false,
+    "utr_match": false
+   },
+   "complaint_id": "Z",
+   "disputed_amount": "30000.00",
+   "disputed_utr": "UTR-ILL2-Z",
+   "invoice_id": null,
+   "reasons": [
+    "No invoice submitted for this disputed UTR."
+   ],
+   "verdict": "NO_INVOICE"
+  },
+  {
+   "checks": {
+    "amount_match": false,
+    "date_within_1_day": false,
+    "gstin_format_valid": false,
+    "utr_match": false
+   },
+   "complaint_id": "W",
+   "disputed_amount": "38443.00",
+   "disputed_utr": "UTR-ILL2-W",
+   "invoice_id": null,
+   "reasons": [
+    "No invoice submitted for this disputed UTR."
+   ],
+   "verdict": "NO_INVOICE"
+  }
+ ]
+}

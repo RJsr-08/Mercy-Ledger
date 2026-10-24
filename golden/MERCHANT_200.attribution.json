@@ -1,0 +1,64 @@
+{
+ "assumptions": [
+  "Debits consume tainted (disputed) money first, then clean money (taint-first). The SOP does not state a rule; both Annexure-V illustrations are consistent with it.",
+  "If a debit hits one victim's money only, attribution is DIRECT. If it hits two or more victims' money together, it is split PRO-RATA to what each still has in the account (SOP Para 5(xiii)(b)).",
+  "Provisional holds follow complaint order and the available balance (as printed in the Annexure-V Action Summary); restoration follows attribution. They can differ."
+ ],
+ "balance_at_seizure": "485200.00",
+ "case_id": "MERCHANT_200",
+ "clean_ring_fenced": "485000.00",
+ "closing_balance": "485200.00",
+ "epochs": [
+  {
+   "clean_balance": "485000.00",
+   "epoch_no": 1,
+   "event_amount": "200.00",
+   "event_type": "CREDIT",
+   "event_utr": "UTR-MERCHANT-0200",
+   "ledger_balance": "485200.00",
+   "note": "Tainted credit of 200.00 from Complainant P1",
+   "tainted_pool": {
+    "P1": "200.00"
+   },
+   "timestamp": "2026-09-01T10:15:00",
+   "txn_id": "T1"
+  }
+ ],
+ "holds_sequence": [
+  {
+   "balance_available": "485200.00",
+   "complaint_id": "P1",
+   "complaint_timestamp": "2026-09-01T16:40:00",
+   "disputed_amount": "200.00",
+   "hold_placed": "200.00",
+   "order": 1
+  }
+ ],
+ "metrics": {
+  "min_pass_through_minutes": null
+ },
+ "opening_balance": "485000.00",
+ "totals": {
+  "forwarded_downstream_total": "0.00",
+  "mercy_right_sized_hold_total": "200.00",
+  "restorable_total": "200.00",
+  "rounding_residual": "0.00",
+  "sop_complaint_order_hold_total": "200.00"
+ },
+ "victims": [
+  {
+   "attribution_method": "INTACT",
+   "complaint_id": "P1",
+   "disputed_amount": "200.00",
+   "disputed_utr": "UTR-MERCHANT-0200",
+   "forwarded_downstream": "0.00",
+   "forwarded_trace": [],
+   "hold_in_current_account": "200.00",
+   "restorable_amount": "200.00",
+   "retention_ratio": "1.000000",
+   "sop_hold_amount": "200.00",
+   "victim_label": "Complainant P1"
+  }
+ ],
+ "warnings": []
+}

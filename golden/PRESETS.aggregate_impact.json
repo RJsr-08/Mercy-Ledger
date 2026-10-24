@@ -1,0 +1,50 @@
+{
+ "blanket_innocent_locked": "485873.00",
+ "by_recommendation": {
+  "DIGITAL_SUSPENSION_PENDING_EDD": 1,
+  "SEIZURE_S106": 1,
+  "TARGETED_LIEN_ONLY": 1
+ },
+ "cases": 3,
+ "innocent_capital_freed": "485000.00",
+ "mercy_innocent_locked": "873.00",
+ "per_case": [
+  {
+   "blanket_innocent_locked": "873.00",
+   "blanket_total_locked": "158873.00",
+   "case_id": "SOP_ILL_1",
+   "innocent_capital_freed": "0.00",
+   "mercy_innocent_locked": "873.00",
+   "recommendation": "SEIZURE_S106",
+   "title": "SOP Annexure-V, Illustration 1 (Attribution possible)",
+   "victim_recoverable_in_blanket": "158000.00",
+   "victim_recoverable_preserved": "158000.00"
+  },
+  {
+   "blanket_innocent_locked": "0.00",
+   "blanket_total_locked": "206543.00",
+   "case_id": "SOP_ILL_2",
+   "innocent_capital_freed": "0.00",
+   "mercy_innocent_locked": "0.00",
+   "recommendation": "DIGITAL_SUSPENSION_PENDING_EDD",
+   "title": "SOP Annexure-V, Illustration 2 (Commingled - pro-rata)",
+   "victim_recoverable_in_blanket": "206543.00",
+   "victim_recoverable_preserved": "206543.00"
+  },
+  {
+   "blanket_innocent_locked": "485000.00",
+   "blanket_total_locked": "485200.00",
+   "case_id": "MERCHANT_200",
+   "innocent_capital_freed": "485000.00",
+   "mercy_innocent_locked": "0.00",
+   "recommendation": "TARGETED_LIEN_ONLY",
+   "title": "Illustrative merchant Rs 200 scenario",
+   "victim_recoverable_in_blanket": "200.00",
+   "victim_recoverable_preserved": "200.00"
+  }
+ ],
+ "reduction_percent": "99.82",
+ "victim_funds_preserved_percent": "100.00",
+ "victim_recoverable_in_blanket": "364743.00",
+ "victim_recoverable_preserved": "364743.00"
+}

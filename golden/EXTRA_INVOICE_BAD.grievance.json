@@ -1,0 +1,27 @@
+{
+ "all_disputed_matched": false,
+ "case_id": "EXTRA_INVOICE_BAD",
+ "disclaimer": "Consistency check of merchant documents against ledger rows. It does not prove the sale is genuine; the IO verifies under SOP Para 10.",
+ "disputed_matched": 0,
+ "disputed_total": 1,
+ "results": [
+  {
+   "checks": {
+    "amount_match": false,
+    "date_within_1_day": false,
+    "gstin_format_valid": false,
+    "utr_match": true
+   },
+   "complaint_id": "P1",
+   "disputed_amount": "200.00",
+   "disputed_utr": "UTR-MERCHANT-0200",
+   "invoice_id": "INV-BAD",
+   "reasons": [
+    "Invoice amount differs from disputed amount.",
+    "Invoice date is more than 1 day from the credit date.",
+    "GSTIN is not in valid 15-character format (format check only, no registry lookup)."
+   ],
+   "verdict": "NOT_MATCHED"
+  }
+ ]
+}

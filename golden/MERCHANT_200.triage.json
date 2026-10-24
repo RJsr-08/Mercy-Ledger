@@ -1,0 +1,63 @@
+{
+ "case_id": "MERCHANT_200",
+ "citations": [
+  "SOP Para 9.1(i): suspension/seizure applies where an account is reported multiple times, on lawful LEA direction under S.106 BNSS",
+  "SOP Para 5(xiii) and Annexure-V: direct attribution where possible, pro-rata where commingled",
+  "SOP Para 5(ix): unwarranted freezing orders are discouraged"
+ ],
+ "disclaimer": "Decision support only. Deterministic rules, not a trained model and not validated on real bank data. The Investigating Officer decides.",
+ "factors": [
+  {
+   "key": "victims3",
+   "label": "3 or more distinct complaints",
+   "points": 0,
+   "triggered": false
+  },
+  {
+   "key": "victims2",
+   "label": "Exactly 2 distinct complaints",
+   "points": 0,
+   "triggered": false
+  },
+  {
+   "key": "fast",
+   "label": "Fast pass-through (tainted money left within 30 min)",
+   "points": 0,
+   "triggered": false
+  },
+  {
+   "key": "lowclean",
+   "label": "Clean balance is under 10% of account balance",
+   "points": 0,
+   "triggered": false
+  },
+  {
+   "key": "nodocs",
+   "label": "No merchant document matched to every disputed UTR",
+   "points": 0,
+   "triggered": false
+  },
+  {
+   "key": "docs",
+   "label": "Merchant documents match every disputed UTR",
+   "points": -2,
+   "triggered": true
+  }
+ ],
+ "human_signoff_required": true,
+ "metrics": {
+  "clean_share_of_balance": "0.9996",
+  "complaints_count": 1,
+  "documents_match_all": true,
+  "min_pass_through_minutes": null,
+  "special_account": false
+ },
+ "rationale": "Only one complaint: the SOP escalates to suspension/seizure when an account is reported multiple times.",
+ "recommendation": "TARGETED_LIEN_ONLY",
+ "score": -2,
+ "thresholds": {
+  "fast_pass_through_minutes": 30,
+  "seizure_at_or_above": 5,
+  "suspension_at_or_above": 3
+ }
+}

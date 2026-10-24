@@ -1,0 +1,1230 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R] /Count 7 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 3808 >>
+stream
+BT
+/F1 10 Tf
+54 790 Td
+/F1 24 Tf
+0 0 Td
+(MERCY LEDGER) Tj
+/F1 10 Tf
+0 -21 Td
+() Tj
+/F1 14 Tf
+0 -14 Td
+(Technical and Implementation Report) Tj
+/F1 10 Tf
+0 -21 Td
+() Tj
+/F1 14 Tf
+0 -14 Td
+(Plain-language guide to the architecture, algorithms, interfaces, validation, and) Tj
+/F1 14 Tf
+0 -21 Td
+(delivery status) Tj
+/F1 10 Tf
+0 -21 Td
+() Tj
+/F1 14 Tf
+0 -14 Td
+(Prepared from the project implementation pack | 23 October 2026) Tj
+/F1 10 Tf
+0 -21 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(1. Executive summary) Tj
+/F1 10 Tf
+0 -21 Td
+(Mercy Ledger is a Python-based decision-support prototype for investigating officers, bank) Tj
+/F1 10 Tf
+0 -14 Td
+(nodal officers, and authorized reviewers handling cyber-fraud fund reconciliation.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(It takes a structured account statement, complaint records, account details, dates, and) Tj
+/F1 10 Tf
+0 -14 Td
+(optional invoice information. It then produces an auditable analysis of disputed money,) Tj
+/F1 10 Tf
+0 -14 Td
+(remaining account balances, deadlines, possible review actions, and draft documents.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The system is not a bank integration, criminal-fraud detector, legal decision-maker, or) Tj
+/F1 10 Tf
+0 -14 Td
+(replacement for NCRP/CFCFRMS. It calculates and explains what the supplied records support.) Tj
+/F1 10 Tf
+0 -14 Td
+(A human officer remains responsible for every decision.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Current status: the attribution engine is implemented and passes its checker. Six backend) Tj
+/F1 10 Tf
+0 -14 Td
+(modules and the frontend are intentionally still placeholders. Therefore the full) Tj
+/F1 10 Tf
+0 -14 Td
+(application is not complete yet.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(2. What problem the system solves) Tj
+/F1 10 Tf
+0 -21 Td
+(A cyber-fraud complaint may identify money that entered an account, but the account may also) Tj
+/F1 10 Tf
+0 -14 Td
+(contain legitimate funds, other victims' money, or money that has already left through later) Tj
+/F1 10 Tf
+0 -14 Td
+(debits.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Manual spreadsheet analysis can be difficult to reproduce. It can also accidentally freeze) Tj
+/F1 10 Tf
+0 -14 Td
+(an entire account, count the same principal twice, or confuse a transaction relationship) Tj
+/F1 10 Tf
+0 -14 Td
+(with proof of guilt.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Mercy Ledger addresses this by using a fixed data contract, deterministic decimal) Tj
+/F1 10 Tf
+0 -14 Td
+(arithmetic, chronological transaction replay, explicit assumptions, and machine-checkable) Tj
+/F1 10 Tf
+0 -14 Td
+(golden outputs.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The tool answers questions such as: Which disputed credits can be matched? How much remains) Tj
+/F1 10 Tf
+0 -14 Td
+(in the account under the demo model? Which outgoing debits consumed disputed funds? What) Tj
+/F1 10 Tf
+0 -14 Td
+(deadlines are relevant? What cash impact would different recommendations have?) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(3. High-level architecture) Tj
+/F1 10 Tf
+0 -21 Td
+(The project is divided into a baseline application and three implementation priorities.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Baseline: shared rules, data contract, presets, golden fixtures, attribution engine, API) Tj
+/F1 10 Tf
+0 -14 Td
+(glue, and acceptance checker.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Priority 1: complete the core MVP. Implement the simulator, triage, SLA, impact, grievance,) Tj
+/F1 10 Tf
+0 -14 Td
+(orders, and frontend modules.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Priority 2: add judge-visible depth such as conservation invariants, stress testing, review) Tj
+/F1 10 Tf
+0 -14 Td
+(flags, victim explanations, replay controls, and scenario cards.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 3899 >>
+stream
+BT
+/F1 10 Tf
+54 790 Td
+/F1 10 Tf
+0 0 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Priority 3: optional stretch work such as controlled transaction-link graphs, assumption) Tj
+/F1 10 Tf
+0 -14 Td
+(sensitivity analysis, and report fingerprints.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The integration flow is: case input -> attribution -> grievance -> triage -> SLA -> impact) Tj
+/F1 10 Tf
+0 -14 Td
+(-> orders -> API response -> browser UI.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(4. Repository map) Tj
+/F1 10 Tf
+0 -21 Td
+(START_HERE.md: team workflow, scope, known limitations, and release checklist.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(INTEGRATION_PROTOCOL.md: ownership rules, merge order, and evidence required before) Tj
+/F1 10 Tf
+0 -14 Td
+(acceptance.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(ROLE_AND_PRIORITY_MAP.md: maps each file to the responsible teammate and priority.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(BASELINE/mercy_ledger/01_DATA_CONTRACT.md: frozen input and output interfaces.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(BASELINE/mercy_ledger/00_RULES_FOR_EVERY_AI.md: engineering, safety, determinism, and) Tj
+/F1 10 Tf
+0 -14 Td
+(handoff rules.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(BASELINE/mercy_ledger/presets.py: three built-in demonstration cases.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(BASELINE/mercy_ledger/golden/: expected JSON results used by the checker.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(BASELINE/mercy_ledger/check_my_work.py: module and whole-pipeline acceptance referee.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(BASELINE/mercy_ledger/app.py: FastAPI HTTP layer.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(BASELINE/mercy_ledger/pipeline.py: orchestration layer.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(BASELINE/mercy_ledger/static/index.html: frontend, currently a placeholder.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(5. Input data contract) Tj
+/F1 10 Tf
+0 -21 Td
+(A case contains case_id, tier, title, description, demo_today, account, opening_balance,) Tj
+/F1 10 Tf
+0 -14 Td
+(transactions, complaints, seizure_timestamp, sla_context, and invoices.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(An account contains account_id, account_type, layer, and holder_name. Account types include) Tj
+/F1 10 Tf
+0 -14 Td
+(SAVINGS, CURRENT, NODAL, POOL, and ESCROW.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Each transaction contains txn_id, timestamp, type, amount, utr, and narration. Type is) Tj
+/F1 10 Tf
+0 -14 Td
+(CREDIT or DEBIT.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Each complaint contains complaint_id, victim_label, state, disputed_utr, disputed_amount,) Tj
+/F1 10 Tf
+0 -14 Td
+(and complaint_timestamp.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(A complaint is treated as disputed only up to the matching credit amount. The current schema) Tj
+/F1 10 Tf
+0 -14 Td
+(does not identify the receiving account of an outgoing transfer.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Money is represented as strings with exactly two decimal places, for example "150000.00".) Tj
+/F1 10 Tf
+0 -14 Td
+(Timestamps and dates are ISO text.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The opening balance is assumed clean by this demonstration model. That is an analytical) Tj
+/F1 10 Tf
+0 -14 Td
+(assumption, not proof of provenance.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(6. Attribution engine: implemented core) Tj
+/F1 10 Tf
+0 -21 Td
+(File: attribution.py. Public function: analyze_attribution\(case\).) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Step 1 - Validate input: required keys, money strings, timestamps, unique transaction IDs,) Tj
+/F1 10 Tf
+0 -14 Td
+(unique complaint IDs, valid complaint-to-credit matches, complaint timing, and non-negative) Tj
+/F1 10 Tf
+0 -14 Td
+(replay balance.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 4168 >>
+stream
+BT
+/F1 10 Tf
+54 790 Td
+/F1 10 Tf
+0 0 Td
+(Step 2 - Sort transactions chronologically using timestamp plus original row index. The row) Tj
+/F1 10 Tf
+0 -14 Td
+(index makes equal timestamps deterministic.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Step 3 - Maintain two balances: clean balance and tainted/disputed pools. Credits matched to) Tj
+/F1 10 Tf
+0 -14 Td
+(complaints add to a victim pool; other credits add to clean funds.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Step 4 - Process debits. Under the explicit demo assumption, disputed funds are consumed) Tj
+/F1 10 Tf
+0 -14 Td
+(before clean funds. This is not presented as a universal statutory algorithm.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Step 5 - Attribute outgoing debits. A debit affecting one victim is DIRECT. A debit) Tj
+/F1 10 Tf
+0 -14 Td
+(affecting multiple victims is divided PRO-RATA according to the victims' remaining amounts.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Step 6 - Record epochs, balances, victim totals, forwarded debit references, retention) Tj
+/F1 10 Tf
+0 -14 Td
+(ratios, holds, warnings, and assumptions.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(All monetary calculations use Decimal. Values are rounded half-up to two decimal places only) Tj
+/F1 10 Tf
+0 -14 Td
+(when written into output JSON.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(7. Attribution outputs) Tj
+/F1 10 Tf
+0 -21 Td
+(The attribution result contains case metadata, opening and closing balances,) Tj
+/F1 10 Tf
+0 -14 Td
+(balance_at_seizure, chronological epochs, holds_sequence, victims, clean_ring_fenced,) Tj
+/F1 10 Tf
+0 -14 Td
+(metrics, totals, assumptions, and warnings.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(An epoch explains one transaction: event type, amount, UTR, tainted pool, clean balance,) Tj
+/F1 10 Tf
+0 -14 Td
+(ledger balance, and a human-readable note.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(A victim result includes disputed amount, attribution method, amount still held, restorable) Tj
+/F1 10 Tf
+0 -14 Td
+(amount, forwarded amount, outgoing debit references, retention ratio, and provisional SOP) Tj
+/F1 10 Tf
+0 -14 Td
+(hold amount.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The output deliberately separates provisional complaint-order holds from attribution-derived) Tj
+/F1 10 Tf
+0 -14 Td
+(restoration values. They may differ and should trigger review rather than being treated as) Tj
+/F1 10 Tf
+0 -14 Td
+(an automatic finding.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(8. Triage module: planned Priority 1 work) Tj
+/F1 10 Tf
+0 -21 Td
+(File: triage.py. Public function: triage\(case, attribution, grievance=None\).) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Its role is to produce a transparent, project-defined scorecard and recommendation. Expected) Tj
+/F1 10 Tf
+0 -14 Td
+(recommendation values are TARGETED_LIEN_ONLY, DIGITAL_SUSPENSION_PENDING_EDD, and) Tj
+/F1 10 Tf
+0 -14 Td
+(SEIZURE_S106.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The scorecard is not an official MHA/I4C score and is not a validated fraud classifier. It) Tj
+/F1 10 Tf
+0 -14 Td
+(is decision support based on supplied evidence and configured thresholds.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The result must include rationale, score, thresholds, metrics, factors, citations,) Tj
+/F1 10 Tf
+0 -14 Td
+(human_signoff_required, and a disclaimer.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The module must never call an account holder guilty or innocent. A review recommendation is) Tj
+/F1 10 Tf
+0 -14 Td
+(not legal authorization.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(9. SLA module: planned Priority 1 work) Tj
+/F1 10 Tf
+0 -21 Td
+(File: sla.py. Public function: compute_sla\(case, as_of\).) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(It produces five clocks in a fixed order: BANK_GRIEVANCE_7D, IO_DECISION_15D,) Tj
+/F1 10 Tf
+0 -14 Td
+(INTERIM_CUSTODY_15D, HOLD_REVIEW_90D, and SUSPENSION_REVIEW_45D.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Each clock contains key, label, SOP reference, start date, deadline, days_left, status, and) Tj
+/F1 10 Tf
+0 -14 Td
+(note.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4110 >>
+stream
+BT
+/F1 10 Tf
+54 790 Td
+/F1 10 Tf
+0 0 Td
+(Status values are NOT_STARTED, ON_TRACK, DUE_SOON, OVERDUE, and COMPLETED.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The 45-day suspension review is a proposed project checkpoint, not an SOP clause. The UI) Tj
+/F1 10 Tf
+0 -14 Td
+(must label it exactly that way if displayed.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The date comes from the case demo_today or an explicitly supplied as_of value. No system) Tj
+/F1 10 Tf
+0 -14 Td
+(clock is allowed.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(10. Impact module: planned Priority 1 work) Tj
+/F1 10 Tf
+0 -21 Td
+(Files: impact.py. Public functions: case_impact\(case, attribution, triage\) and) Tj
+/F1 10 Tf
+0 -14 Td
+(aggregate_impact\(items\).) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Case impact compares a blanket restriction with the selected recommendation. It includes) Tj
+/F1 10 Tf
+0 -14 Td
+(blanket_total_locked, blanket_innocent_locked, mercy_innocent_locked,) Tj
+/F1 10 Tf
+0 -14 Td
+(innocent_capital_freed, victim_recoverable_preserved, and victim_recoverable_in_blanket.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The metric is cash-focused. A digital-services suspension is not treated as cash being) Tj
+/F1 10 Tf
+0 -14 Td
+(frozen; targeted lien or digital-only suspension therefore has zero cash locked in the demo) Tj
+/F1 10 Tf
+0 -14 Td
+(metric.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(For a seizure recommendation, the clean balance at the reference timestamp is used. The) Tj
+/F1 10 Tf
+0 -14 Td
+(reference is seizure time when supplied, otherwise the selected closing snapshot.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Aggregate impact combines cases, recommendations, preserved victim funds, reduction) Tj
+/F1 10 Tf
+0 -14 Td
+(percentage, and per-case details.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(11. Grievance module: planned Priority 1 work) Tj
+/F1 10 Tf
+0 -21 Td
+(File: grievance.py. Public function: verify_grievance\(case\).) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(It performs structured document-to-ledger consistency checks on invoices. It can compare) Tj
+/F1 10 Tf
+0 -14 Td
+(invoice amount, date, GSTIN format, and claimed UTR against supplied records.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(A match means the supplied documents are financially consistent with the supplied ledger. It) Tj
+/F1 10 Tf
+0 -14 Td
+(does not prove that a transaction was legitimate, that a person is innocent, or that the) Tj
+/F1 10 Tf
+0 -14 Td
+(document is genuine.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The result contains case_id, results, disputed_total, disputed_matched,) Tj
+/F1 10 Tf
+0 -14 Td
+(all_disputed_matched, and disclaimer.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(GSTIN validation is format-only unless an external registry result is explicitly provided.) Tj
+/F1 10 Tf
+0 -14 Td
+(No registry lookup is part of this prototype.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(12. Draft orders module: planned Priority 1 work) Tj
+/F1 10 Tf
+0 -21 Td
+(File: orders.py. Public function: build_orders\(case, attribution, triage, sla, grievance\).) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(It produces exactly three complete HTML drafts: restoration_order_html, indemnity_bond_html,) Tj
+/F1 10 Tf
+0 -14 Td
+(and edd_packet_html.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Every document must be visibly marked DRAFT, require authorized human review, and state that) Tj
+/F1 10 Tf
+0 -14 Td
+(it is not legally validated or court-ready.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(All input-derived values must be HTML-escaped to prevent injection. The module must present) Tj
+/F1 10 Tf
+0 -14 Td
+(amounts already computed by the analysis and must not invent new financial calculations.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The generated documents are workflow aids, not legally operative orders.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(13. API and orchestration) Tj
+/F1 10 Tf
+0 -21 Td
+(File: pipeline.py. The analyze function deep-copies the case, resolves as_of, runs each) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3697 >>
+stream
+BT
+/F1 10 Tf
+54 790 Td
+/F1 10 Tf
+0 0 Td
+(stage, and collects errors instead of hiding them.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(If an upstream module fails, dependent sections may be null. The errors array reports the) Tj
+/F1 10 Tf
+0 -14 Td
+(stage, exception type, and message so the operator can see incomplete results.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(File: app.py. FastAPI exposes preset listing, preset retrieval, case analysis, portfolio) Tj
+/F1 10 Tf
+0 -14 Td
+(impact, health, and the static homepage.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(POST /api/analyze-case accepts either preset_id or a complete case object, plus optional) Tj
+/F1 10 Tf
+0 -14 Td
+(as_of.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(GET /api/portfolio-impact accepts bounded n_sim and seed values and combines built-in) Tj
+/F1 10 Tf
+0 -14 Td
+(presets with simulator cases.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The API layer uses FastAPI and Pydantic. Pure analysis modules are intended to use only the) Tj
+/F1 10 Tf
+0 -14 Td
+(Python standard library.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(14. Determinism and safety rules) Tj
+/F1 10 Tf
+0 -21 Td
+(Same input must produce the same output. The simulator may use random.Random\(seed\), but no) Tj
+/F1 10 Tf
+0 -14 Td
+(global randomness or system time is allowed.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(No network, AI/LLM calls, machine learning, external data lookup, or live bank integration) Tj
+/F1 10 Tf
+0 -14 Td
+(is part of the product.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Input dictionaries must not be mutated. Modules should work on copies or read-only values.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Money must never be calculated with binary floating point. The checker rejects float values) Tj
+/F1 10 Tf
+0 -14 Td
+(in output.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Untrusted text must be escaped before it is placed into generated HTML.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Errors must be visible. The pipeline uses explicit error collection rather than returning a) Tj
+/F1 10 Tf
+0 -14 Td
+(false success-shaped result.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(15. Validation strategy) Tj
+/F1 10 Tf
+0 -21 Td
+(Golden JSON files are the acceptance targets for the supplied cases. They define exact) Tj
+/F1 10 Tf
+0 -14 Td
+(output keys and expected values.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(check_my_work.py checks imports, stub markers, forbidden dependencies, deterministic) Tj
+/F1 10 Tf
+0 -14 Td
+(behavior, output JSON shape, money types, input immutability, and pipeline readiness.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Module checks are run independently: attribution, simulator, triage, sla, impact, grievance,) Tj
+/F1 10 Tf
+0 -14 Td
+(and orders. The all command also checks the complete pipeline.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(make_sample_data.py is guarded and refuses to regenerate offline data while required modules) Tj
+/F1 10 Tf
+0 -14 Td
+(are placeholders.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(benchmark.py is also guarded. It must not be used to claim performance while the pipeline is) Tj
+/F1 10 Tf
+0 -14 Td
+(still running placeholder code.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(16. Current test evidence) Tj
+/F1 10 Tf
+0 -21 Td
+(Command executed: python check_my_work.py all) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(PASS: attribution) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(FAIL: simulator) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(FAIL: triage) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(FAIL: sla) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 3760 >>
+stream
+BT
+/F1 10 Tf
+54 790 Td
+/F1 10 Tf
+0 0 Td
+(FAIL: impact) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(FAIL: grievance) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(FAIL: orders) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(FAIL: pipeline \(whole system\)) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Interpretation: attribution is ready; the remaining failures are expected because the six) Tj
+/F1 10 Tf
+0 -14 Td
+(modules contain MERCY_LEDGER_STUB placeholders. The frontend is also still a placeholder) Tj
+/F1 10 Tf
+0 -14 Td
+(page.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(17. Priority 1 completion plan) Tj
+/F1 10 Tf
+0 -21 Td
+(1. Implement simulator.py and verify seeded determinism, valid cases, unique IDs, and non-) Tj
+/F1 10 Tf
+0 -14 Td
+(negative balances.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(2. Implement triage.py, sla.py, and impact.py against the data contract and golden fixtures.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(3. Implement grievance.py and orders.py with safe escaping and clear draft disclaimers.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(4. Replace static/index.html with a UI that loads live API results, shows errors, formats) Tj
+/F1 10 Tf
+0 -14 Td
+(Indian-style amounts, and labels demo/offline data.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(5. Run python check_my_work.py all. Do not change the checker or golden fixtures to force a) Tj
+/F1 10 Tf
+0 -14 Td
+(pass.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(6. Only after the gate passes, run make_sample_data.py, start uvicorn, and manually test all) Tj
+/F1 10 Tf
+0 -14 Td
+(presets.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(7. Add Priority 2 only after Priority 1 is stable and demonstrable.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(18. Priority 2 and 3 concepts) Tj
+/F1 10 Tf
+0 -21 Td
+(Priority 2 should add real conservation checks, replay of attribution epochs, review flags) Tj
+/F1 10 Tf
+0 -14 Td
+(for hold-versus-attribution differences, deterministic victim explanations, and scenario) Tj
+/F1 10 Tf
+0 -14 Td
+(cards.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Conservation checks can verify opening balance + credits - debits = closing balance, pool) Tj
+/F1 10 Tf
+0 -14 Td
+(reconciliation, and allocation bounds. These are software/accounting consistency checks, not) Tj
+/F1 10 Tf
+0 -14 Td
+(fraud accuracy measurements.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Priority 3 can add a controlled multi-account link graph using supplied identifiers,) Tj
+/F1 10 Tf
+0 -14 Td
+(sensitivity analysis for different debit-consumption assumptions, and SHA-256 report) Tj
+/F1 10 Tf
+0 -14 Td
+(fingerprints.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(A graph edge proves only that supplied records match under configured criteria. It does not) Tj
+/F1 10 Tf
+0 -14 Td
+(prove control, intent, or exact money provenance after commingling.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(Sensitivity outputs are hypothetical comparisons. A fingerprint proves payload equality) Tj
+/F1 10 Tf
+0 -14 Td
+(against a digest, not authorship or legal authenticity.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(19. Limitations and responsible interpretation) Tj
+/F1 10 Tf
+0 -21 Td
+(The initial schema cannot identify a receiving account for an outgoing debit, so it cannot) Tj
+/F1 10 Tf
+0 -14 Td
+(prove a next hop.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The account opening balance is assumed clean in the demo model; real analysis requires) Tj
+/F1 10 Tf
+0 -14 Td
+(adequate statement history.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The disputed-first debit rule is an explicit model assumption, not a universal legal) Tj
+/F1 10 Tf
+0 -14 Td
+(requirement.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 1354 >>
+stream
+BT
+/F1 10 Tf
+54 790 Td
+/F1 10 Tf
+0 0 Td
+(SOP-derived examples include documented normalization or assumed times where the printed) Tj
+/F1 10 Tf
+0 -14 Td
+(source was incomplete or inconsistent.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The merchant scenario is invented and must not be presented as a verified real-world case.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(No output authorizes freezing, seizure, restoration, or prosecution. Authorized officers) Tj
+/F1 10 Tf
+0 -14 Td
+(must review the evidence and applicable procedure.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 18 Tf
+0 -14 Td
+(20. Final conclusion) Tj
+/F1 10 Tf
+0 -21 Td
+(Mercy Ledger's strongest completed foundation is its deterministic attribution engine,) Tj
+/F1 10 Tf
+0 -14 Td
+(frozen data contract, golden fixtures, and guarded acceptance checker.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The project is architecturally prepared for an end-to-end demo, but it is not yet a finished) Tj
+/F1 10 Tf
+0 -14 Td
+(application because the supporting backend modules and frontend remain placeholders.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+/F1 10 Tf
+0 -14 Td
+(The correct engineering path is to finish and verify Priority 1 before adding advanced) Tj
+/F1 10 Tf
+0 -14 Td
+(features. A trustworthy demo should show both useful calculations and honest limitations.) Tj
+/F1 10 Tf
+0 -14 Td
+() Tj
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 16 0 R >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000161 00000 n 
+0000000231 00000 n 
+0000004091 00000 n 
+0000004217 00000 n 
+0000008168 00000 n 
+0000008294 00000 n 
+0000012514 00000 n 
+0000012640 00000 n 
+0000016803 00000 n 
+0000016931 00000 n 
+0000020681 00000 n 
+0000020809 00000 n 
+0000024622 00000 n 
+0000024750 00000 n 
+0000026157 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R >>
+startxref
+26285
+%%EOF

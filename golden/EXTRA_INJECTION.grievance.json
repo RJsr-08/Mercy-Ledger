@@ -1,0 +1,25 @@
+{
+ "all_disputed_matched": true,
+ "case_id": "EXTRA_INJECTION",
+ "disclaimer": "Consistency check of merchant documents against ledger rows. It does not prove the sale is genuine; the IO verifies under SOP Para 10.",
+ "disputed_matched": 1,
+ "disputed_total": 1,
+ "results": [
+  {
+   "checks": {
+    "amount_match": true,
+    "date_within_1_day": true,
+    "gstin_format_valid": true,
+    "utr_match": true
+   },
+   "complaint_id": "P1",
+   "disputed_amount": "200.00",
+   "disputed_utr": "UTR-MERCHANT-0200",
+   "invoice_id": "INV-MERCHANT-2026-0412",
+   "reasons": [
+    "All checks passed."
+   ],
+   "verdict": "MATCHED"
+  }
+ ]
+}

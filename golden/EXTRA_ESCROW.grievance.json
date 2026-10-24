@@ -1,0 +1,41 @@
+{
+ "all_disputed_matched": false,
+ "case_id": "EXTRA_ESCROW",
+ "disclaimer": "Consistency check of merchant documents against ledger rows. It does not prove the sale is genuine; the IO verifies under SOP Para 10.",
+ "disputed_matched": 0,
+ "disputed_total": 2,
+ "results": [
+  {
+   "checks": {
+    "amount_match": false,
+    "date_within_1_day": false,
+    "gstin_format_valid": false,
+    "utr_match": false
+   },
+   "complaint_id": "M2",
+   "disputed_amount": "20000.00",
+   "disputed_utr": "UTR-X-2",
+   "invoice_id": null,
+   "reasons": [
+    "No invoice submitted for this disputed UTR."
+   ],
+   "verdict": "NO_INVOICE"
+  },
+  {
+   "checks": {
+    "amount_match": false,
+    "date_within_1_day": false,
+    "gstin_format_valid": false,
+    "utr_match": false
+   },
+   "complaint_id": "M1",
+   "disputed_amount": "10000.00",
+   "disputed_utr": "UTR-X-1",
+   "invoice_id": null,
+   "reasons": [
+    "No invoice submitted for this disputed UTR."
+   ],
+   "verdict": "NO_INVOICE"
+  }
+ ]
+}

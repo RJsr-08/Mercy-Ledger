@@ -1,0 +1,51 @@
+{
+ "account": {
+  "account_id": "ACC-MERCHANT",
+  "account_type": "CURRENT",
+  "holder_name": "<script>alert(1)</script>Evil & Co",
+  "layer": 3
+ },
+ "case_id": "EXTRA_INJECTION",
+ "complaints": [
+  {
+   "complaint_id": "P1",
+   "complaint_timestamp": "2026-09-01T16:40:00",
+   "disputed_amount": "200.00",
+   "disputed_utr": "UTR-MERCHANT-0200",
+   "state": "Bihar",
+   "victim_label": "Complainant P1"
+  }
+ ],
+ "demo_today": "2026-09-10",
+ "description": "ILLUSTRATIVE reconstruction of the pattern argued before the Rajasthan High Court: a working merchant account with Rs 4,85,000 of clean capital receives ONE disputed Rs 200 UPI payment for goods and is blanket-frozen. All names/UTRs/dates are invented for the demo.",
+ "invoices": [
+  {
+   "amount": "200.00",
+   "claimed_utr": "UTR-MERCHANT-0200",
+   "date": "2026-09-01",
+   "gstin": "08ABCDE1234F1Z5",
+   "invoice_id": "INV-MERCHANT-2026-0412"
+  }
+ ],
+ "opening_balance": "485000.00",
+ "seizure_timestamp": "2026-09-02T09:00:00",
+ "sla_context": {
+  "account_holder_complaint_on": "2026-09-01",
+  "grievance_filed_on": null,
+  "io_decision_on": null,
+  "io_direction_on": null,
+  "suspension_started_on": "2026-09-02"
+ },
+ "tier": 2,
+ "title": "Merchant Rs 200 case (illustrative reconstruction)",
+ "transactions": [
+  {
+   "amount": "200.00",
+   "narration": "UPI payment for medicines",
+   "timestamp": "2026-09-01T10:15:00",
+   "txn_id": "T1",
+   "type": "CREDIT",
+   "utr": "UTR-MERCHANT-0200"
+  }
+ ]
+}

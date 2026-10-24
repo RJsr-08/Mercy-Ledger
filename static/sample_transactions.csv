@@ -1,0 +1,8 @@
+timestamp,type,amount,utr,narration,balance
+2026-09-01T09:30:00,CREDIT,50000.00,OPEN-BAL-001,Opening ledger balance,50000.00
+2026-09-01T10:15:00,CREDIT,25000.00,UTR-MED-001,UPI payment for medical monitors,75000.00
+2026-09-01T11:00:00,CREDIT,45000.00,UTR-MED-002,NEFT received from wholesale buyer,120000.00
+2026-09-01T11:45:00,DEBIT,15000.00,OUT-LOG-001,Logistics courier charges,105000.00
+2026-09-01T12:30:00,CREDIT,30000.00,UTR-MED-003,IMPS sale of diagnostic reagents,135000.00
+2026-09-01T14:00:00,DEBIT,20000.00,OUT-SUP-002,Payment to manufacturer,115000.00
+2026-09-01T15:30:00,DEBIT,10000.00,OUT-UTIL-003,Electricity and utility bills,105000.00
